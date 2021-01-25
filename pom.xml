@@ -6,7 +6,7 @@
 
   <groupId>net.cubespace.dynmap</groupId>
   <artifactId>Dynmap-MultiServer</artifactId>
-  <version>0.5.2</version>
+  <version>0.5.3</version>
 
   <build>
     <defaultGoal>clean install</defaultGoal>
@@ -90,7 +90,7 @@
       <url>http://repo.md-5.net/content/repositories/snapshots/</url>
     </repository>
   </repositories>
-  
+
   <dependencies>
     <dependency>
       <groupId>com.google.code.gson</groupId>
