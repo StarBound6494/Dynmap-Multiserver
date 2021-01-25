@@ -155,4 +155,12 @@
       <version>2.3.1-20150720.092759-2</version>
     </dependency>
   </dependencies>
+
+  <distributionManagement>
+    <repository>
+      <id>${env.MAVEN_REPO_NAME}</id>
+      <name>AuraDev Repo</name>
+      <url>https://maven.aura-dev.team/repository/${env.MAVEN_REPO_NAME}/</url>
+    </repository>
+  </distributionManagement>
 </project>

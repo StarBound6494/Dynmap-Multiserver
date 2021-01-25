@@ -1,0 +1,39 @@
+image: maven:latest
+
+variables:
+  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+  MAVEN_REPO_NAME: "auradev-snapshots"
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - .m2/repository/
+    - target/
+
+build:
+  stage: build
+  tags:
+    - docker
+  script:
+    - mvn $MAVEN_CLI_OPTS compile
+
+deploy-snapshot:
+  stage: deploy
+  tags:
+    - docker
+  script:
+    - mvn $MAVEN_CLI_OPTS deploy
+
+deploy-release:
+  stage: deploy
+  tags:
+    - docker
+  variables:
+    MAVEN_REPO_NAME: "auradev-releases"
+  script:
+    - mvn $MAVEN_CLI_OPTS deploy
+  when: manual
