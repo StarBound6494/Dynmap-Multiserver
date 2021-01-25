@@ -27,6 +27,9 @@ deploy-snapshot:
     - docker
   script:
     - mvn $MAVEN_CLI_OPTS deploy
+  artifacts:
+    paths:
+      - target/Dynmap-MultiServer.jar
 
 deploy-release:
   stage: deploy
