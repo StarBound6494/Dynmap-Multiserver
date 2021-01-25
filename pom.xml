@@ -6,7 +6,7 @@
 
   <groupId>net.cubespace.dynmap</groupId>
   <artifactId>Dynmap-MultiServer</artifactId>
-  <version>0.5.3</version>
+  <version>0.5.4</version>
 
   <build>
     <defaultGoal>clean install</defaultGoal>
@@ -43,7 +43,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>1.4</version>
+        <version>3.2.4</version>
         <executions>
           <execution>
             <phase>package</phase>
@@ -51,7 +51,8 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <finalName>${project.artifactId}</finalName>
+              <shadedArtifactAttached>true</shadedArtifactAttached>
+              <shadedClassifierName>all</shadedClassifierName>
               <artifactSet>
                 <includes>
                   <include>com.google.code.gson:*</include>

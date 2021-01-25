@@ -29,7 +29,7 @@ deploy-snapshot:
     - mvn $MAVEN_CLI_OPTS deploy
   artifacts:
     paths:
-      - target/Dynmap-MultiServer.jar
+      - "target/Dynmap-MultiServer-*-all.jar"
 
 deploy-release:
   stage: deploy
