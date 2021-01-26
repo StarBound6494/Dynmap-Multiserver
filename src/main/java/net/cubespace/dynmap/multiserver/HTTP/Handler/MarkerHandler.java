@@ -67,7 +67,10 @@ public class MarkerHandler implements IHandler {
         HandlerUtil.setContentTypeHeader(response, file.getName());
         HandlerUtil.setDateAndCacheHeaders(response, file.lastModified());
 
-        response.headers().set(CONTENT_LENGTH, file.length());
+        long length = file.length();
+        if (length >= 0) {
+            response.headers().set(CONTENT_LENGTH, file.length());
+        }
         response.headers().set(CONNECTION, HttpHeaders.Values.CLOSE);
         response.headers().set(VARY, ACCEPT_ENCODING);
 
