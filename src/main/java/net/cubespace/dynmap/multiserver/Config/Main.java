@@ -24,6 +24,7 @@ public class Main extends Config {
     public Integer Webserver_WorkerThreads = 16;
     public String Webserver_DefaultWorld = "world";
     public String Webserver_DefaultMap = "flat";
+    public Integer Webserver_DefaultZoom = 2;
     @Comment("Set SidebarOpened: 'true' to pin menu sidebar opened permanently, 'pinned' to default the sidebar to pinned, but allow it to unpin")
     public String Webserver_SidebarOpened = "false";
 
