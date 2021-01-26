@@ -1,6 +1,7 @@
 package net.cubespace.dynmap.multiserver.Config;
 
 
+import net.cubespace.Yamler.Config.Comment;
 import net.cubespace.Yamler.Config.Config;
 
 import java.io.File;
@@ -23,6 +24,8 @@ public class Main extends Config {
     public Integer Webserver_WorkerThreads = 16;
     public String Webserver_DefaultWorld = "world";
     public String Webserver_DefaultMap = "flat";
+    @Comment("Set SidebarOpened: 'true' to pin menu sidebar opened permanently, 'pinned' to default the sidebar to pinned, but allow it to unpin")
+    public String Webserver_SidebarOpened = "false";
 
     public ArrayList<Dynmap> DynMap = new ArrayList<>();
 
