@@ -6,8 +6,8 @@
 
   <groupId>net.cubespace.dynmap</groupId>
   <artifactId>Dynmap-MultiServer</artifactId>
-  <version>0.5.6</version>
-  
+  <version>0.5.7</version>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -93,7 +93,7 @@
               <artifactSet>
                 <includes>
                   <include>com.google.code.gson:*</include>
-                  <include>javax.activation:*</include>
+                  <include>com.sun.activation:*</include>
                   <include>org.slf4j:*</include>
                   <include>log4j:*</include>
                   <include>org.yaml:*</include>
